@@ -1,8 +1,39 @@
-.nav__list {
-    @include
+body{
+    background-color: #1B1D22;
+}
+header{
+    margin-top: 40px;
+}
+nav {
     display: flex;
+    align-items: center;
+    gap: 65px;
+    .logo{
+        @include fonts(var(--title-color), 24px, 800, 100%, 3px, center);
+        text-transform: uppercase;
+    }
+    div{
+    width: 400px;
         a{
-            text-decoration: none;
-            
+            margin-left: 65px;
+            float: left;
+        }
+        p{
+            float: right;
+            @include fonts(var(--title-color), 18px, 700, 28px, 0, center);
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+    }
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    justify-content: space-between;
+        a{
+            @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
+            text-transform: uppercase;
         }
 }
+//@mixin fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)

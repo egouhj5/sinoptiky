@@ -58,9 +58,62 @@ img {
   padding: 0 15px;
 }
 
+body {
+  background-color: #1B1D22;
+}
+
+header {
+  margin-top: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+nav .logo {
+  color: var(--title-color);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav div {
+  width: 400px;
+}
+nav div a {
+  margin-left: 65px;
+  float: left;
+}
+nav div p {
+  float: right;
+  color: var(--title-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
 .nav__list {
   display: flex;
+  align-items: center;
+  width: 360px;
+  justify-content: space-between;
 }
 .nav__list a {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 3px;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
