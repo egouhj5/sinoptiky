@@ -56,4 +56,11 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.nav__list {
+  display: flex;
+}
+.nav__list a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
