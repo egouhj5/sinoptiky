@@ -1,0 +1,11 @@
+%btn {
+  box-sizing: border-box;
+  background: var(--bg-color);
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: 12%;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid var(--accent-color);
+  color: var(--accent-color);
+}
