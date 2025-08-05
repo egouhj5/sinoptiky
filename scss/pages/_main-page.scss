@@ -1,39 +1,60 @@
-body{
-    background-color: #1B1D22;
-}
-header{
-    margin-top: 40px;
+header {
+  margin-top: 40px;
 }
 nav {
-    display: flex;
-    align-items: center;
-    gap: 65px;
-    .logo{
-        @include fonts(var(--title-color), 24px, 800, 100%, 3px, center);
-        text-transform: uppercase;
-    }
-    div{
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  .logo {
+    @include fonts(var(--title-color), 24px, 800, 100%, 3px, center);
+    text-transform: uppercase;
+  }
+  div {
     width: 400px;
-        a{
-            margin-left: 65px;
-            float: left;
-        }
-        p{
-            float: right;
-            @include fonts(var(--title-color), 18px, 700, 28px, 0, center);
-            text-transform: uppercase;
-            margin-left: 30px;
-        }
+    a {
+      margin-left: 65px;
+      float: left;
     }
+    p {
+      float: right;
+      @include fonts(var(--title-color), 18px, 700, 28px, 0, center);
+      text-transform: uppercase;
+      margin-left: 30px;
+    }
+  }
 }
 .nav__list {
-    display: flex;
-    align-items: center;
-    width: 360px;
-    justify-content: space-between;
-        a{
-            @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
-            text-transform: uppercase;
-        }
+  display: flex;
+  align-items: center;
+  width: 360px;
+  justify-content: space-between;
+  transition: 0.5s;
+  a {
+    @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
+    text-transform: uppercase;
+    &:hover {
+      color: var(--title-color);
+    }
+  }
 }
+// ------------------------------------------------------------HERO SECTION------------------------------------------------------------
+.hero {
+  margin: 150px;
+}
+.hero__title {
+  @include fonts(var(--title-color), 45px, 700, 70px, 0, left);
+  text-transform: capitalize;
+}
+.hero__text {
+  @include fonts(var(--text-color), 16px, 400, 28px, 0, left);
+  margin-top: 30px;
+}
+.hero__btn {
+  @include fonts(var(--accent-color), 18px, 800, 25px, 3px, center);
+  @extend %btn;
+  text-transform: uppercase;
+  padding: 23px 40px;
+  margin-top: 45px;
+}
+
 //@mixin fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)

@@ -8,4 +8,10 @@
   text-transform: uppercase;
   border: 3px solid var(--accent-color);
   color: var(--accent-color);
+  transition: 0.5s;
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: 3px solid var(--accent-color);
+  }
 }
