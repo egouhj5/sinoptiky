@@ -5,8 +5,27 @@
   --accent-color: #8649cc;
 }
 
+.hero__btn {
+  box-sizing: border-box;
+  background: var(--bg-color);
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: 12%;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid var(--accent-color);
+  color: var(--accent-color);
+  transition: 0.5s;
+}
+.hero__btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: 3px solid var(--accent-color);
+}
+
 body {
   font-family: Manrope;
+  background-color: var(--bg-color);
 }
 
 h1,
@@ -58,10 +77,6 @@ img {
   padding: 0 15px;
 }
 
-body {
-  background-color: #1B1D22;
-}
-
 header {
   margin-top: 40px;
 }
@@ -106,6 +121,7 @@ nav div p {
   align-items: center;
   width: 360px;
   justify-content: space-between;
+  transition: 0.5s;
 }
 .nav__list a {
   color: var(--text-color);
@@ -116,4 +132,46 @@ nav div p {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+.nav__list a:hover {
+  color: var(--title-color);
+}
+
+.hero {
+  margin: 150px;
+}
+
+.hero__title {
+  color: var(--title-color);
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.hero__text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.hero__btn {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 23px 40px;
+  margin-top: 45px;
 }/*# sourceMappingURL=style.css.map */
