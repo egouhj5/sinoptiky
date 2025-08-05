@@ -1,3 +1,18 @@
+.blestochki1 {
+  position: absolute;
+  width: 1441px;
+  height: 1441px;
+  left: 1180px;
+  top: -900px;
+}
+
+.blestochki2 {
+  position: absolute;
+  width: 1441px;
+  height: 1441px;
+  left: -890px;
+  top: -900px;
+}
 header {
   margin-top: 40px;
 }
@@ -26,8 +41,8 @@ nav {
 .nav__list {
   display: flex;
   align-items: center;
-  width: 360px;
   justify-content: space-between;
+  gap: 30px;
   transition: 0.5s;
   a {
     @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
@@ -41,6 +56,11 @@ nav {
 .hero {
   margin: 150px;
 }
+.hero__container {
+  display: flex;
+  gap: 300px;
+  align-items: top;
+}
 .hero__title {
   @include fonts(var(--title-color), 45px, 700, 70px, 0, left);
   text-transform: capitalize;
@@ -48,6 +68,7 @@ nav {
 .hero__text {
   @include fonts(var(--text-color), 16px, 400, 28px, 0, left);
   margin-top: 30px;
+  width: 470px;
 }
 .hero__btn {
   @include fonts(var(--accent-color), 18px, 800, 25px, 3px, center);
@@ -56,5 +77,48 @@ nav {
   padding: 23px 40px;
   margin-top: 45px;
 }
-
-//@mixin fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)
+.hero__img {
+  width: 400px;
+  height: 400px;
+  rotate: 10deg;
+}
+.watch-box__first-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  p {
+    @include fonts(var(--title-color), 18px, 700, 28px, 0, left);
+  }
+  ul {
+    display: flex;
+    gap: 5px;
+    align-items: start;
+    li {
+      display: flex;
+      align-items: start;
+      transition: 0.3s;
+      border-radius: 50%;
+      &:hover {
+        border: 2px solid var(--accent-color);
+      }
+    }
+    button {
+      border: none;
+      border-radius: 50%;
+      padding: 7px;
+      background: var(--accent-color);
+      margin: 5px;
+      z-index: 1;
+    }
+  }
+}
+.watchbox__second-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    @include fonts(var(--title-color), 23px, 700, 28px, 0, left);
+    z-index: 1;
+  }
+}
+//@include fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)
