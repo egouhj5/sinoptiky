@@ -1,24 +1,35 @@
-body{
+body {
     background-color: #1B1D22;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
 }
-header{
+
+header {
     margin-top: 40px;
 }
+
 nav {
     display: flex;
     align-items: center;
     gap: 65px;
-    .logo{
+
+    .logo {
         @include fonts(var(--title-color), 24px, 800, 100%, 3px, center);
         text-transform: uppercase;
     }
-    div{
-    width: 400px;
-        a{
+
+    div {
+        width: 400px;
+
+        a {
             margin-left: 65px;
             float: left;
         }
-        p{
+
+        p {
             float: right;
             @include fonts(var(--title-color), 18px, 700, 28px, 0, center);
             text-transform: uppercase;
@@ -26,14 +37,115 @@ nav {
         }
     }
 }
+
 .nav__list {
     display: flex;
     align-items: center;
     width: 360px;
     justify-content: space-between;
-        a{
-            @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
-            text-transform: uppercase;
-        }
+
+    a {
+        @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
+        text-transform: uppercase;
+    }
 }
+
 //@mixin fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)
+
+footer {
+    position: static;
+    bottom: 10px;
+
+    .container {
+        display: flex;
+        gap: 70px;
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    justify-content: space-between;
+    gap: 25px;
+
+    a {
+        @include fonts(var(--title-color), 24px, 800, 100%, 3px, start);
+        text-transform: uppercase;
+    }
+
+    p {
+        float: right;
+        @include fonts(var(--text-color), 14px, 700, 28px, 0px, start);
+    }
+
+    span {
+        @include fonts(var(--title-color), 12px, 700, 28px, 0px, start);
+        text-transform: uppercase;
+    }
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+        @include fonts(var(--gold-color), 21px, 800, 100%, 0px, start);
+    }
+
+    a {
+        @include fonts(var(--text-color), 16px, 500, 100%, 0px, start);
+    }
+
+    li:nth-child(2) a {
+        @include fonts(var(--title-color), 16px, 800, 100%, 0px, start);
+    }
+}
+
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    p {
+        @include fonts(var(--title-color), 16px, 800, 100%, 0px, start);
+    }
+
+    li:first-child p {
+        @include fonts(var(--gold-color), 21px, 800, 100%, 0px, start);
+    }
+
+    a {
+        @include fonts(var(--text-color), 16px, 500, 100%, 0px, start);
+    }
+}
+
+.logo__container {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+
+    div {
+        width: 20.53121566772461px;
+        height: 20.53121566772461px;
+        opacity: 0.8;
+        background-color: var(--gold-color);
+    }
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    p {
+        @include fonts(var(--text-color), 16px, 400, 100%, 0px, start);
+    }
+
+    li:first-child p {
+        @include fonts(var(--gold-color), 21px, 800, 100%, 0px, start);
+    }
+
+}
