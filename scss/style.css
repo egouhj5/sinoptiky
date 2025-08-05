@@ -8,11 +8,6 @@
 .hero__btn {
   box-sizing: border-box;
   background: var(--bg-color);
-  font-weight: 800;
-  line-height: 25px;
-  letter-spacing: 12%;
-  text-align: center;
-  text-transform: uppercase;
   border: 3px solid var(--accent-color);
   color: var(--accent-color);
   transition: 0.5s;
@@ -26,6 +21,7 @@
 body {
   font-family: Manrope;
   background-color: var(--bg-color);
+  z-index: 1;
 }
 
 h1,
@@ -77,6 +73,22 @@ img {
   padding: 0 15px;
 }
 
+.blestochki1 {
+  position: absolute;
+  width: 1441px;
+  height: 1441px;
+  left: 1180px;
+  top: -900px;
+}
+
+.blestochki2 {
+  position: absolute;
+  width: 1441px;
+  height: 1441px;
+  left: -890px;
+  top: -900px;
+}
+
 header {
   margin-top: 40px;
 }
@@ -119,8 +131,8 @@ nav div p {
 .nav__list {
   display: flex;
   align-items: center;
-  width: 360px;
   justify-content: space-between;
+  gap: 30px;
   transition: 0.5s;
 }
 .nav__list a {
@@ -139,6 +151,12 @@ nav div p {
 
 .hero {
   margin: 150px;
+}
+
+.hero__container {
+  display: flex;
+  gap: 300px;
+  align-items: top;
 }
 
 .hero__title {
@@ -161,6 +179,7 @@ nav div p {
   text-align: left;
   text-decoration: none;
   margin-top: 30px;
+  width: 470px;
 }
 
 .hero__btn {
@@ -174,4 +193,63 @@ nav div p {
   text-transform: uppercase;
   padding: 23px 40px;
   margin-top: 45px;
+}
+
+.hero__img {
+  width: 400px;
+  height: 400px;
+  rotate: 10deg;
+}
+
+.watch-box__first-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.watch-box__first-box p {
+  color: var(--title-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+}
+.watch-box__first-box ul {
+  display: flex;
+  gap: 5px;
+  align-items: start;
+}
+.watch-box__first-box ul li {
+  display: flex;
+  align-items: start;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.watch-box__first-box ul li:hover {
+  border: 2px solid var(--accent-color);
+}
+.watch-box__first-box ul button {
+  border: none;
+  border-radius: 50%;
+  padding: 7px;
+  background: var(--accent-color);
+  margin: 5px;
+  z-index: 1;
+}
+
+.watchbox__second-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.watchbox__second-box a {
+  color: var(--title-color);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
