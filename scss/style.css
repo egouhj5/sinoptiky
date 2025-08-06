@@ -5,14 +5,14 @@
   --accent-color: #8649cc;
 }
 
-.hero__btn {
+.featured-product__box button, .hero__btn {
   box-sizing: border-box;
   background: var(--bg-color);
   border: 3px solid var(--accent-color);
   color: var(--accent-color);
   transition: 0.5s;
 }
-.hero__btn:hover {
+.featured-product__box button:hover, .hero__btn:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -22,6 +22,7 @@ body {
   font-family: Manrope;
   background-color: var(--bg-color);
   z-index: 1;
+  overflow-x: hidden;
 }
 
 h1,
@@ -79,14 +80,30 @@ img {
   height: 1441px;
   left: 1180px;
   top: -900px;
+  z-index: -1;
+  animation: scale-animation 5s infinite ease-in-out;
 }
 
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .blestochki2 {
   position: absolute;
   width: 1441px;
   height: 1441px;
   left: -890px;
   top: -900px;
+  z-index: -1;
+  animation: scale-animation 5s infinite ease-in-out;
+  animation-delay: 1s;
 }
 
 header {
@@ -252,4 +269,74 @@ nav div p {
   text-align: left;
   text-decoration: none;
   z-index: 1;
+}
+
+.featured-product__container {
+  display: flex;
+}
+
+.featured-product__img-list {
+  display: flex;
+  margin-right: 55px;
+}
+.featured-product__img-list li:nth-child(1) {
+  width: 190px;
+  height: 215px;
+  margin-right: 60px;
+}
+.featured-product__img-list li:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.featured-product__img-list li:nth-child(2) {
+  width: 220px;
+  height: 215px;
+  margin-right: 30px;
+}
+.featured-product__img-list li:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+.featured-product__img-list li:nth-child(3) {
+  width: 235px;
+  height: 215px;
+}
+.featured-product__img-list li:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  rotate: -4deg;
+}
+
+.featured-product__box h3 {
+  color: var(--title-color);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.featured-product__box p {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.featured-product__box button {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: 12%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 22px 52px;
 }/*# sourceMappingURL=style.css.map */
