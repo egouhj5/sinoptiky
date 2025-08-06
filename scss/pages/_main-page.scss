@@ -149,3 +149,46 @@ footer {
     }
 
 }
+
+.subscribe-wrapper {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgba(33, 36, 43, 1);
+}
+
+.subscribe-input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.subscribe-input::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+.subscribe-button {
+    border: none;
+    background-color: #8D7B68;
+    color: #f0f0f0;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #7a6a58;
+}
+
+.subscribe-button svg {
+    width: 24px;
+    height: 24px;
+}
