@@ -1,0 +1,15 @@
+
+.site__map {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+        height: 16px;
+        width: 16px;
+        filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
+    }
+    p {
+        @include fonts(var(--text-color), 16px, 700, 28px, 0, center)
+    }
+}
+//@include fonts($color, $font-size, $font-weight, $line-height, $LS, $TA)

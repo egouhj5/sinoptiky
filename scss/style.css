@@ -77,8 +77,9 @@ img {
   position: absolute;
   width: 1441px;
   height: 1441px;
-  left: 1180px;
-  top: -900px;
+  right: -600px;
+  top: -800px;
+  z-index: -1;
 }
 
 .blestochki2 {
@@ -87,6 +88,7 @@ img {
   height: 1441px;
   left: -890px;
   top: -900px;
+  z-index: -1;
 }
 
 header {
@@ -109,11 +111,17 @@ nav .logo {
   text-transform: uppercase;
 }
 nav div {
-  width: 400px;
+  margin-left: auto;
 }
 nav div a {
-  margin-left: 65px;
+  margin-right: 250px;
   float: left;
+}
+nav div a img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(3) invert(1);
+  transform: scaleX(-1);
 }
 nav div p {
   float: right;
@@ -126,6 +134,18 @@ nav div p {
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+nav div p img {
+  height: 16px;
+  width: 16px;
+  transition: 0.3s;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(90%) contrast(101%);
+}
+nav div p img:hover {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
 }
 
 .nav__list {
@@ -193,6 +213,22 @@ nav div p {
   text-transform: uppercase;
   padding: 23px 40px;
   margin-top: 45px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero__btn:hover img {
+  right: -35px;
+  opacity: 1;
+}
+.hero__btn img {
+  opacity: 0;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
+  transition: 0.3s;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 0;
 }
 
 .hero__img {
@@ -225,6 +261,7 @@ nav div p {
   align-items: start;
   transition: 0.3s;
   border-radius: 50%;
+  border: 2px solid var(--bg-color);
 }
 .watch-box__first-box ul li:hover {
   border: 2px solid var(--accent-color);
@@ -252,4 +289,24 @@ nav div p {
   text-align: left;
   text-decoration: none;
   z-index: 1;
+}
+
+.site__map {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.site__map img {
+  height: 16px;
+  width: 16px;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
+}
+.site__map p {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
