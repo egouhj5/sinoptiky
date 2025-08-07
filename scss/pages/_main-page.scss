@@ -2,8 +2,8 @@
   position: absolute;
   width: 1441px;
   height: 1441px;
-  left: 1180px;
-  top: -900px;
+  right: -600px;
+  top: -800px;
   z-index: -1;
   animation: scale-animation 5s infinite ease-in-out;
 }
@@ -40,16 +40,34 @@ nav {
     text-transform: uppercase;
   }
   div {
-    width: 400px;
+    margin-left: auto;
     a {
-      margin-left: 65px;
+      margin-right: 250px;
       float: left;
+      img {
+        width: 30px;
+        height: 30px;
+        filter: brightness(3) invert(1);
+        transform: scaleX(-1);
+      }
     }
     p {
       float: right;
       @include fonts(var(--title-color), 18px, 700, 28px, 0, center);
       text-transform: uppercase;
       margin-left: 30px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+      height: 16px;
+      width: 16px;
+      transition: 0.3s;
+        filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(90%) contrast(101%);
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
+      }
+      }
     }
   }
 }
@@ -92,6 +110,22 @@ nav {
   text-transform: uppercase;
   padding: 23px 40px;
   margin-top: 45px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover img {
+    right: -35px;
+    opacity: 1;
+  }
+  img {
+    opacity: 0;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
+    transition: 0.3s;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 0;
+  }
 }
 .hero__img {
   width: 400px;
@@ -114,6 +148,7 @@ nav {
       align-items: start;
       transition: 0.3s;
       border-radius: 50%;
+        border: 2px solid var(--bg-color);
       &:hover {
         border: 2px solid var(--accent-color);
       }
