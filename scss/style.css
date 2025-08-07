@@ -5,14 +5,14 @@
   --accent-color: #8649cc;
 }
 
-.trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn {
+.featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn {
   box-sizing: border-box;
   background: var(--bg-color);
   border: 3px solid var(--accent-color);
   color: var(--accent-color);
   transition: 0.5s;
 }
-.trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover {
+.featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -598,6 +598,226 @@ nav div p img:hover {
   opacity: 1;
 }
 .trending-count__btn img {
+  opacity: 0;
+  filter: brightness(0) saturate(100%) invert(100%);
+  transition: 0.3s;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
+
+.featured-categories {
+  margin-top: 100px;
+}
+
+.featured-categories__title {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.featured-categories__subtitle {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+.featured-categories__form {
+  align-items: center;
+  margin-top: 50px;
+}
+.featured-categories__form ul {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.featured-categories__form ul li input[type=radio] {
+  display: none;
+}
+.featured-categories__form ul li label {
+  width: 200px;
+  height: 70px;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 0;
+  letter-spacing: 12%;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  border: 3px solid var(--accent-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-categories__form ul li input[type=radio]:checked + label {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: 3px solid var(--accent-color);
+}
+
+.featured-categories__box {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.featured-categories__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 370px;
+  height: 512px;
+  background-color: rgb(33, 36, 43);
+}
+
+.cell__img-box {
+  position: relative;
+}
+.cell__img-box::after {
+  display: block;
+  position: absolute;
+  content: "";
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sky-qweller-4000 .cell__img-box::after {
+  background-image: url("/images/sky-qweller-4000.png");
+  width: 161px;
+  height: 216px;
+}
+
+#day-date-820 .cell__img-box::after {
+  background-image: url("/images/day-date-820.png");
+  width: 185px;
+  height: 236px;
+}
+
+#date-just-6500 .cell__img-box::after {
+  background-image: url("/images/date-just-6500.png");
+  width: 195.2px;
+  height: 254.61px;
+  transform: translate(-63%, -50%) rotate(-4deg) scale(1.2);
+}
+
+#sports-master-400 .cell__img-box::after {
+  background-image: url("/images/sport-master-400.png");
+  width: 161px;
+  height: 210px;
+  transform: translate(-50%, -50%);
+}
+
+#pearl-master-600 .cell__img-box::after {
+  background-image: url("/images/pearl-master-600.png");
+  width: 161px;
+  height: 210px;
+  transform: translate(-50%, -50%);
+}
+
+#just-sports-200 .cell__img-box::after {
+  background-image: url("/images/just-sports-200.png");
+  width: 161px;
+  height: 210px;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.cell__name-price {
+  display: flex;
+  justify-content: space-between;
+}
+.cell__name-price p {
+  color: var(--title-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.cell__text-box {
+  padding: 0 25px;
+}
+
+.cell__text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.cell__btns {
+  margin-top: 35px;
+  display: flex;
+  gap: 15px;
+}
+.cell__btns button:first-child {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.cell__btns button {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 0;
+  letter-spacing: 12%;
+  text-align: center;
+  text-decoration: none;
+  width: 154px;
+  height: 54px;
+  text-transform: uppercase;
+}
+
+.featured-categories__main-btn {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  width: 172px;
+  height: 70px;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.featured-categories__main-btn:hover img {
+  right: -20px;
+  opacity: 1;
+}
+.featured-categories__main-btn img {
   opacity: 0;
   filter: brightness(0) saturate(100%) invert(100%);
   transition: 0.3s;
