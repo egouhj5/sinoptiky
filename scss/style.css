@@ -5,14 +5,14 @@
   --accent-color: #8649cc;
 }
 
-.featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn {
+.blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn {
   box-sizing: border-box;
   background: var(--bg-color);
   border: 3px solid var(--accent-color);
   color: var(--accent-color);
   transition: 0.5s;
 }
-.featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover {
+.blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -818,6 +818,73 @@ nav div p img:hover {
   opacity: 1;
 }
 .featured-categories__main-btn img {
+  opacity: 0;
+  filter: brightness(0) saturate(100%) invert(100%);
+  transition: 0.3s;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
+
+.blog {
+  margin-top: 100px;
+}
+
+.blog__container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.blog__img {
+  width: 600px;
+  height: 488px;
+}
+
+.blog__title {
+  color: var(--title-color);
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 57px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 60px;
+}
+
+.blog__text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.blog__btn {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  height: 70px;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.blog__btn:hover img {
+  right: -20px;
+  opacity: 1;
+}
+.blog__btn img {
   opacity: 0;
   filter: brightness(0) saturate(100%) invert(100%);
   transition: 0.3s;
