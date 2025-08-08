@@ -19,11 +19,11 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(0.8);
+    transform: scale(0.1);
   }
-  75% {
-    transform: scale(0.8);
-  }
+  // 75% {
+  //   transform: scale(0.8);
+  //}
   100% {
     transform: scale(1);
   }
@@ -150,6 +150,11 @@ nav {
   height: 400px;
   rotate: 10deg;
 }
+.hero__watch-img__bg {
+  background: url("/images/calibre-9001-bg.png");
+  background-size: 110%;
+  background-position: -20px center;
+}
 .watch-box__first-box {
   display: flex;
   justify-content: space-between;
@@ -275,6 +280,7 @@ nav {
       max-width: 220px;
       min-width: 220px;
       rotate: -4deg;
+      transform: scale(1.1);
     }
   }
 }
