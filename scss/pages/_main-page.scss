@@ -122,7 +122,7 @@ nav {
   width: 470px;
 }
 .hero__btn {
-  @include fonts(var(--accent-color), 18px, 800, 25px, 3px, center);
+  @include fonts(var(--accent-color), 18px, 700, 25px, 3px, center);
   @extend %btn;
   text-transform: uppercase;
   padding: 23px 40px;
@@ -279,7 +279,7 @@ nav {
   }
   button {
     @extend %btn;
-    @include fonts(var(--accent-color), 18px, 800, 25px, 12%, center);
+    @include fonts(var(--accent-color), 18px, 700, 25px, 12%, center);
     text-transform: uppercase;
     margin-top: 20px;
     padding: 22px 52px;
@@ -309,6 +309,8 @@ nav {
       order: -1;
     }
     a {
+      cursor: pointer;
+      position: relative;
       p {
         @include fonts(var(--title-color), 16px, 600, 28px, 0, left);
         text-transform: capitalize;
@@ -316,7 +318,7 @@ nav {
         padding: 0 25px;
       }
       &:hover img {
-        right: -20px;
+        right: 10px;
         opacity: 1;
       }
       img {
@@ -326,8 +328,8 @@ nav {
         height: 35px;
         width: 35px;
         position: absolute;
-        top: -3px;
-        right: 0;
+        bottom: 0;
+        right: 30px;
       }
     }
     p {
@@ -337,7 +339,7 @@ nav {
     }
     button {
       @extend %btn;
-      @include fonts(var(--accent-color), 18px, 800, 0, 3px, center);
+      @include fonts(var(--accent-color), 18px, 700, 0, 3px, center);
       text-transform: uppercase;
       padding: 23px 80px;
       align-self: center;
@@ -385,23 +387,27 @@ nav {
 }
 .trending-count__btn {
   @extend %btn;
-  @include fonts(var(--accent-color), 18px, 800, 0, 0, center);
+  @include fonts(var(--accent-color), 18px, 700, 0, 0, center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   margin-top: 30px;
   width: 200px;
   height: 70px;
+  position: relative;
   &:hover img {
-    right: -20px;
+    right: -35px;
     opacity: 1;
   }
   img {
     opacity: 0;
-    filter: brightness(0) saturate(100%) invert(100%);
+    filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(135%) contrast(101%);
     transition: 0.3s;
     height: 35px;
     width: 35px;
     position: absolute;
-    top: -3px;
     right: 0;
   }
 }
@@ -434,7 +440,7 @@ nav {
       label {
         width: 200px;
         height: 70px;
-        @include fonts(var(--accent-color), 18px, 800, 0, 12%, center);
+        @include fonts(var(--accent-color), 18px, 700, 0, 12%, center);
         box-sizing: border-box;
         background: var(--bg-color);
         border: 3px solid var(--accent-color);
@@ -471,6 +477,26 @@ nav {
 }
 .cell__img-box {
   position: relative;
+  button {
+    transition: 0.3s;
+    position: absolute;
+    background: none;
+    border: none;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    &:hover img {
+      filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(170%) contrast(101%);
+    }
+    img {
+      transition: 0.3s;
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(135%) contrast(101%);
+    }
+  }
   &::after {
     display: block;
     position: absolute;
@@ -544,7 +570,7 @@ nav {
   }
   button {
     @extend %btn;
-    @include fonts(var(--accent-color), 16px, 800, 0, 12%, center);
+    @include fonts(var(--accent-color), 16px, 700, 0, 2px, center);
     // padding: 16px 30px;
     width: 154px;
     height: 54px;
@@ -553,30 +579,33 @@ nav {
 }
 .featured-categories__main-btn {
   @extend %btn;
-  @include fonts(var(--accent-color), 18px, 600, 0, 2px, center);
+  @include fonts(var(--accent-color), 18px, 700, 0, 2px, center);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 172px;
   height: 70px;
   text-transform: uppercase;
-  display: block;
   margin: 0 auto;
   margin-top: 60px;
   &:hover img {
-    right: -20px;
+    right: -35px;
     opacity: 1;
   }
   img {
     opacity: 0;
-    filter: brightness(0) saturate(100%) invert(100%);
+    filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(135%) contrast(101%);
     transition: 0.3s;
     height: 35px;
     width: 35px;
     position: absolute;
-    top: -3px;
     right: 0;
   }
 }
 //@include fonts($color, $font-size, $font-weight, $line-height, $LS, $TA);
-//-------------------------------------------------------BLOG---------------------------------------------------------------------.
+//-------------------------------------------------------BLOG SECTION---------------------------------------------------------------------.
 .blog {
   margin-top: 100px;
 }
@@ -601,23 +630,27 @@ nav {
 }
 .blog__btn {
   @extend %btn;
-  @include fonts(var(--accent-color), 18px, 600, 0, 3px, center);
+  @include fonts(var(--accent-color), 18px, 700, 0, 3px, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 200px;
   height: 70px;
   text-transform: uppercase;
   margin-top: 50px;
   &:hover img {
-    right: -20px;
+    right: -35px;
     opacity: 1;
   }
   img {
     opacity: 0;
-    filter: brightness(0) saturate(100%) invert(100%);
+    filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(135%) contrast(101%);
     transition: 0.3s;
     height: 35px;
     width: 35px;
     position: absolute;
-    top: -3px;
     right: 0;
   }
 }
