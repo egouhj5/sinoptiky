@@ -19,11 +19,11 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(0.8);
+    transform: scale(0.1);
   }
-  75% {
-    transform: scale(0.8);
-  }
+  // 75% {
+  //   transform: scale(0.8);
+  //}
   100% {
     transform: scale(1);
   }
@@ -150,6 +150,11 @@ nav {
   height: 400px;
   rotate: 10deg;
 }
+.hero__watch-img__bg {
+  background: url("/images/calibre-9001-bg.png");
+  background-size: 110%;
+  background-position: -20px center;
+}
 .watch-box__first-box {
   display: flex;
   justify-content: space-between;
@@ -237,32 +242,45 @@ nav {
 }
 .featured-product__img-list {
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
   li:nth-child(1) {
-    width: 190px;
-    height: 215px;
+    width: 263px;
+    height: 263px;
+    background: url("/images/sky-queller-4000-bg.png");
+    background-position: -30px center;
     margin-right: 60px;
     img {
-      width: 100%;
-      height: 100%;
+      max-width: 165px;
+      min-width: 165px;
     }
   }
   li:nth-child(2) {
-    width: 220px;
-    height: 215px;
+    width: 263px;
+    height: 263px;
+    background: url("/images/day-date-820-bg.png");
+    background-position: -30px center;
     margin-right: 30px;
     img {
-      width: 100%;
-      height: 100%;
+      min-width: 185px;
+      max-width: 185px;
     }
   }
   li:nth-child(3) {
-    width: 235px;
-    height: 215px;
+    width: 263px;
+    height: 263px;
+    background: url("/images/date-just-6500-bg.png");
+    background-position: -30px center;
     img {
-      width: 100%;
-      height: 100%;
+      max-width: 220px;
+      min-width: 220px;
       rotate: -4deg;
+      transform: scale(1.1);
     }
   }
 }
