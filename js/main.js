@@ -1,4 +1,5 @@
 import Alert from "./modules/alert.js";
+<<<<<<< Updated upstream
 document.addEventListener("DOMContentLoaded", () => {
   new Alert();
 });
@@ -33,3 +34,10 @@ buttons.forEach((btn, index) => {
 });
 
 showSlide(0);
+=======
+import LanguageChange from "./modules/language-change.js"
+document.addEventListener("DOMContentLoaded", ()=> {
+    new Alert();
+    new LanguageChange();
+})
+>>>>>>> Stashed changes
