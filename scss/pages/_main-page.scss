@@ -149,11 +149,47 @@ nav {
   width: 400px;
   height: 400px;
   rotate: 10deg;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.hero__img.active {
+  opacity: 1;
+}
+.hero__img.exit {
+  animation: img-animation 3s infinite ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+@keyframes img-animation {
+  0% {
+    transform: translateX(0) rotate(-10deg);
+  }
+  25% {
+    transform: translateX(-40%) rotate(-80deg);
+  }
+  50% {
+    transform: translateX(-80%) rotate(-160deg);
+  }
+  75% {
+    transform: translateX(-100%) rotate(-240deg);
+  }
+  100% {
+    transform: translateX(-120%) rotate(-360deg);
+  }
 }
 .hero__watch-img__bg {
   background: url("/images/calibre-9001-bg.png");
   background-size: 110%;
   background-position: -20px center;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
 }
 .watch-box__first-box {
   display: flex;
@@ -505,14 +541,14 @@ nav {
     cursor: pointer;
     &:hover img {
       filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
-      hue-rotate(227deg) brightness(170%) contrast(101%);
+        hue-rotate(227deg) brightness(170%) contrast(101%);
     }
     img {
       transition: 0.3s;
       width: 30px;
       height: 30px;
       filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
-      hue-rotate(227deg) brightness(135%) contrast(101%);
+        hue-rotate(227deg) brightness(135%) contrast(101%);
     }
   }
   &::after {
