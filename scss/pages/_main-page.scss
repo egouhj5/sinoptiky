@@ -55,6 +55,8 @@ nav {
   }
   div {
     margin-left: auto;
+    position: relative;
+
     a {
       margin-right: 250px;
       float: left;
@@ -63,7 +65,15 @@ nav {
         height: 30px;
         filter: brightness(3) invert(1);
         transform: scaleX(-1);
+        &:hover {
+          filter: brightness(0) saturate(100%) invert(24%) sepia(76%)
+          saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
+        }
       }
+    }
+    p:nth-child(3) {
+      position: inherit;
+      z-index: 3;
     }
     p {
       float: right;
@@ -92,14 +102,88 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  transition: 0.5s;
   a {
+    transition: 0.5s;
     @include fonts(var(--text-color), 18px, 500, 100%, 3px, center);
     text-transform: uppercase;
     &:hover {
       color: var(--title-color);
     }
   }
+}
+.language-change__modal {
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  border: 4px solid var(--accent-color);
+  padding: 3px;
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  top: 35px;
+  left: 320px;
+  z-index: 3;
+  ul {
+    li {
+    display: flex;
+    justify-content: center;
+      button {
+        @include fonts(var(--text-color), 18px, 700, 28px, 0, center);
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.3s;
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+.language-change-open__button {
+  transition: 0.3s;
+  border: none;
+  background: none;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  transform: rotate(90deg);
+  z-index: 3;
+  &:focus {
+    transform: rotate(0);
+  }
+}
+.blur {
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.454);
+  backdrop-filter: blur(2px); /* Blurs content behind this element */
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.hidden {
+  display: none;
+}
+@keyframes appearAnimation {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+  100% {
+    top: 35px;
+    opacity: 1;
+  }
+}
+.animate {
+  animation: appearAnimation 0.5s ease;
 }
 //@include fonts($color, $font-size, $font-weight, $line-height, $LS, $TA);
 // ------------------------------------------------------------HERO SECTION------------------------------------------------------------
@@ -753,7 +837,11 @@ footer {
   }
 
   a {
+    transition: 0.3s;
     @include fonts(var(--text-color), 16px, 500, 100%, 0px, start);
+    &:hover {
+      @include fonts(var(--title-color), 16px, 500, 100%, 0px, start);
+    }
   }
 
   li:nth-child(2) a {
@@ -789,10 +877,15 @@ footer {
     height: 20px;
   }
   img {
+    transition: 0.3s;
     width: 20px;
     height: 20px;
     filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
-      hue-rotate(227deg) brightness(130%) contrast(101%);
+      hue-rotate(227deg) brightness(120%) contrast(101%);
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(150%) contrast(101%);
+    }
   }
 }
 

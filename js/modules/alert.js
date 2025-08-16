@@ -1,5 +1,5 @@
 export default class Alert {
     constructor() {
-        alert("THE WORLD")
+        // alert("THE WORLD")
     }
 }
