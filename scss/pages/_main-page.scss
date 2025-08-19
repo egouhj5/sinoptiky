@@ -19,7 +19,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(0.1);
+    transform: scale(0.8);
   }
   // 75% {
   //   transform: scale(0.8);
@@ -67,7 +67,7 @@ nav {
         transform: scaleX(-1);
         &:hover {
           filter: brightness(0) saturate(100%) invert(24%) sepia(76%)
-          saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
+            saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
         }
       }
     }
@@ -127,8 +127,8 @@ nav {
   z-index: 3;
   ul {
     li {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
       button {
         @include fonts(var(--text-color), 18px, 700, 28px, 0, center);
         background: none;
@@ -884,7 +884,7 @@ footer {
       hue-rotate(227deg) brightness(120%) contrast(101%);
     &:hover {
       filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
-      hue-rotate(227deg) brightness(150%) contrast(101%);
+        hue-rotate(227deg) brightness(150%) contrast(101%);
     }
   }
 }
