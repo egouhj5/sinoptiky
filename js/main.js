@@ -1,7 +1,8 @@
 import Alert from "./modules/alert.js";
-<<<<<<< Updated upstream
+import LanguageChange from "./modules/language-change.js"
 document.addEventListener("DOMContentLoaded", () => {
   new Alert();
+  new LanguageChange();
 });
 const slides = document.querySelectorAll(".hero__img");
 const buttons = document.querySelectorAll(".watchbox__slider-list button");
@@ -34,10 +35,3 @@ buttons.forEach((btn, index) => {
 });
 
 showSlide(0);
-=======
-import LanguageChange from "./modules/language-change.js"
-document.addEventListener("DOMContentLoaded", ()=> {
-    new Alert();
-    new LanguageChange();
-})
->>>>>>> Stashed changes
