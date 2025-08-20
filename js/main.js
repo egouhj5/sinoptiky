@@ -1,8 +1,12 @@
 import Alert from "./modules/alert.js";
-import LanguageChange from "./modules/language-change.js"
+import Slider from "./modules/slider.js";
+import Sort from "./modules/sort.js";
+import LanguageChange from "./modules/language-change.js";
 document.addEventListener("DOMContentLoaded", () => {
   new Alert();
   new LanguageChange();
+  new Slider();
+  new Sort();
 });
 const slides = document.querySelectorAll(".hero__img");
 const buttons = document.querySelectorAll(".watchbox__slider-list button");
@@ -33,5 +37,4 @@ function showSlide(index) {
 buttons.forEach((btn, index) => {
   btn.addEventListener("click", () => showSlide(index));
 });
-
 showSlide(0);
