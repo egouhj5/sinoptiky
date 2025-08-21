@@ -1,0 +1,62 @@
+.cart-container {
+    margin: 100px auto;
+    .cart__table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+            .cart__product {
+            margin: 0;
+            padding: 0;
+             width: auto; 
+            align-items: center;
+            display: flex;
+            gap: 20px;
+            p {
+                float: right;
+            }
+            .cart-talbe-item__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("/images/calibre-9001-bg.png") no-repeat;
+            background-size: 100%;
+            background-position: center;
+            width: 180px;
+            height: 180px;
+                img {
+                    height: 160px;
+                    width: 160px;
+                }
+            }
+        }
+        .cart-table__labels {       
+            td:nth-child(1) {
+                @include fonts(var(--accent-color), 18px, 500, 28px, 0, left);
+            }
+            @include fonts(var(--accent-color), 18px, 500, 28px, 0, center);
+            text-transform: uppercase;
+            border-bottom: 1px var(--accent-color) solid;
+            margin: 0;
+        }
+        .cart-table__quantity {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            p {
+                margin: auto 0;
+            }
+            button:nth-child(1) {
+                margin-bottom: 5px;
+                @include fonts(var(--accent-color), 50px, 400, 70px, 0, center);
+            }
+            button {
+                background: none;
+                border: none;
+                @include fonts(var(--accent-color), 35px, 500, 28px, 0, center);
+            }
+        }
+        .cart-table__item {
+            @include fonts(var(--title-color), 22px, 400, 28px, 0, center);
+        }
+    }
+}
