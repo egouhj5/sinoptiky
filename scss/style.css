@@ -75,6 +75,99 @@ img {
   padding: 0 15px;
 }
 
+.cart-container {
+  margin: 100px auto;
+}
+.cart-container .cart__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.cart-container .cart__table .cart__product {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+.cart-container .cart__table .cart__product p {
+  float: right;
+}
+.cart-container .cart__table .cart__product .cart-talbe-item__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/images/calibre-9001-bg.png") no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 180px;
+  height: 180px;
+}
+.cart-container .cart__table .cart__product .cart-talbe-item__image img {
+  height: 160px;
+  width: 160px;
+}
+.cart-container .cart__table .cart-table__labels {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px var(--accent-color) solid;
+  margin: 0;
+}
+.cart-container .cart__table .cart-table__labels td:nth-child(1) {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+}
+.cart-container .cart__table .cart-table__quantity {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.cart-container .cart__table .cart-table__quantity p {
+  margin: auto 0;
+}
+.cart-container .cart__table .cart-table__quantity button:nth-child(1) {
+  margin-bottom: 5px;
+  color: var(--accent-color);
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+.cart-container .cart__table .cart-table__quantity button {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+.cart-container .cart__table .cart-table__item {
+  color: var(--title-color);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
 .blestochki1 {
   position: absolute;
   width: 1441px;
