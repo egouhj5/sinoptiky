@@ -4,30 +4,37 @@
         width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
-            .cart__product {
-            margin: 0;
-            padding: 0;
-             width: auto; 
-            align-items: center;
-            display: flex;
-            gap: 20px;
-            p {
-                float: right;
-            }
-            .cart-talbe-item__image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url("/images/calibre-9001-bg.png") no-repeat;
-            background-size: 100%;
-            background-position: center;
-            width: 180px;
-            height: 180px;
-                img {
-                    height: 160px;
-                    width: 160px;
+            .cart-product__cell {
+                .cart__product {
+                    margin: 30px 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                    text-align: left;
                 }
-            }
+                width: 550px;
+                margin: 0;
+                padding: 0; 
+                p {
+                    float: right;
+                }
+                .cart-talbe-item__image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url("/images/calibre-9001-bg.png") no-repeat;
+                background-size: 100%;
+                background-position: center;
+                width: 180px;
+                height: 180px;
+                    img {
+                        height: 160px;
+                        width: 160px;
+                    }
+                }
         }
         .cart-table__labels {       
             td:nth-child(1) {
@@ -57,6 +64,42 @@
         }
         .cart-table__item {
             @include fonts(var(--title-color), 22px, 400, 28px, 0, center);
+        }
+    }
+    hr {
+        border: 1px solid var(--accent-color);
+    }
+    .cart__menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+        align-items: center;
+        .cart-menu__total {
+            display: flex;
+            gap: 10px;
+            margin-right: 30px;
+            .cart-menu-total__text {
+                @include fonts(var(--text-color), 16px, 500, 28px, 0, center);
+                text-transform: uppercase;
+            }
+            .cart-menu-total__price {
+                @include fonts(var(--title-color), 22px, 400, 28px, 0, center);
+            }
+        }
+        .cart-menu__buttons {
+        display: flex;
+        gap: 10px;
+        button:first-child {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        button {
+            @extend %btn;
+            @include fonts(var(--accent-color), 16px, 700, 0, 2px, center);
+            padding: 10px 20px;
+            height: 54px;
+            text-transform: uppercase;
+        }
         }
     }
 }

@@ -5,7 +5,7 @@
   --accent-color: #8649cc;
 }
 
-.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description button, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn {
+.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description button, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn, .cart-container .cart__menu .cart-menu__buttons button {
   box-sizing: border-box;
   cursor: pointer;
   background: var(--bg-color);
@@ -13,7 +13,7 @@
   color: var(--accent-color);
   transition: 0.5s;
 }
-.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description button:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover {
+.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description button:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover, .cart-container .cart__menu .cart-menu__buttons button:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -83,18 +83,25 @@ img {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.cart-container .cart__table .cart__product {
+.cart-container .cart__table .cart-product__cell {
+  width: 550px;
   margin: 0;
   padding: 0;
-  width: auto;
-  align-items: center;
-  display: flex;
-  gap: 20px;
 }
-.cart-container .cart__table .cart__product p {
+.cart-container .cart__table .cart-product__cell .cart__product {
+  margin: 30px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-align: left;
+}
+.cart-container .cart__table .cart-product__cell p {
   float: right;
 }
-.cart-container .cart__table .cart__product .cart-talbe-item__image {
+.cart-container .cart__table .cart-product__cell .cart-talbe-item__image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +111,7 @@ img {
   width: 180px;
   height: 180px;
 }
-.cart-container .cart__table .cart__product .cart-talbe-item__image img {
+.cart-container .cart__table .cart-product__cell .cart-talbe-item__image img {
   height: 160px;
   width: 160px;
 }
@@ -166,6 +173,59 @@ img {
   letter-spacing: 0;
   text-align: center;
   text-decoration: none;
+}
+.cart-container hr {
+  border: 1px solid var(--accent-color);
+}
+.cart-container .cart__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  align-items: center;
+}
+.cart-container .cart__menu .cart-menu__total {
+  display: flex;
+  gap: 10px;
+  margin-right: 30px;
+}
+.cart-container .cart__menu .cart-menu__total .cart-menu-total__text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.cart-container .cart__menu .cart-menu__total .cart-menu-total__price {
+  color: var(--title-color);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+.cart-container .cart__menu .cart-menu__buttons {
+  display: flex;
+  gap: 10px;
+}
+.cart-container .cart__menu .cart-menu__buttons button:first-child {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.cart-container .cart__menu .cart-menu__buttons button {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 54px;
+  text-transform: uppercase;
 }
 
 .blestochki1 {
