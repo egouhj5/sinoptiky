@@ -25,15 +25,20 @@
             <li><a href="">store</a></li>
           </ul>
           <div class="float-left">
-            <a href=""><img src="images/shopping-cart-icon.png" alt="" /></a>
+            <a href="koshik-page.html"><img src="images/shopping-cart-icon.png" alt="" /></a>
             <p class="">log in</p>
-            <p class="">eng <button class="language-change-open__button"><img src="images/down-arrow-icon.png" alt="" /></button></p>
-              <div class="language-change__modal hidden">
-                <ul class="list">
-                  <li><button>UA</button></li>
-                  <li><button>ENG</button></li>
-                </ul>
-              </div>
+            <p class="">
+              eng
+              <button class="language-change-open__button">
+                <img src="images/down-arrow-icon.png" alt="" />
+              </button>
+            </p>
+            <div class="language-change__modal hidden">
+              <ul class="list">
+                <li><button>UA</button></li>
+                <li><button>ENG</button></li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -48,9 +53,11 @@
             <td>price</td>
           </tr>
           <tr class="cart-table__item">
-            <td class="cart__product">
-              <div class="cart-talbe-item__image"><img src="images/calibre-9001-classic-watch.png" alt=""></div>
-              <p>sky-dweller 6000</p>
+            <td class="cart-product__cell">
+              <div class="cart__product">
+                <div class="cart-talbe-item__image"><img src="images/calibre-9001-classic-watch.png" alt=""></div>
+                <p>sky-dweller 6000</p>
+              </div>
             </td>
             <td>$50</td>
             <td>
@@ -64,11 +71,18 @@
           </tr>
         </table>
         <hr>
-        <div>
-          <div></div>
-          <div></div>
+        <div class="cart__menu">
+          <div class="cart-menu__buttons">
+            <button>checkout</button>
+            <button>continue shopping</button>
+          </div>
+          <div class="cart-menu__total">
+            <p class="cart-menu-total__text">sub total:</p>
+            <p class="cart-menu-total__price">$50</p>
+          </div>
         </div>
       </section>
+    <div class="blur hidden"></div>  
     </main>
     <footer>
       <div class="container">
@@ -154,4 +168,5 @@
       </div>
     </footer>
   </body>
+  <script type="module" src="js/main.js"></script>
 </html>
