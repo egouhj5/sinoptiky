@@ -2,10 +2,14 @@ import Alert from "./modules/alert.js";
 import Slider from "./modules/slider.js";
 import Sort from "./modules/sort.js";
 import LanguageChange from "./modules/language-change.js";
+import Cart from "./modules/cart.js";
+import CartLoad from "./modules/cart-content-load.js"
 document.addEventListener("DOMContentLoaded", () => {
   new Alert();
   new LanguageChange();
-  new Slider();
+  new Slider(); 
+  new Cart();
+  new CartLoad();
   new Sort();
 });
 const slides = document.querySelectorAll(".hero__img");
