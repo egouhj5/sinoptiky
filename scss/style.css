@@ -139,17 +139,17 @@ nav div {
   margin-left: auto;
   position: relative;
 }
-nav div a {
+nav div div {
   margin-right: 250px;
   float: left;
 }
-nav div a img {
+nav div div img {
   width: 30px;
   height: 30px;
   filter: brightness(3) invert(1);
   transform: scaleX(-1);
 }
-nav div a img:hover {
+nav div div img:hover {
   filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(130%) contrast(101%);
 }
 nav div p:nth-child(3) {
@@ -283,6 +283,15 @@ nav div p img:hover {
 }
 .animate {
   animation: appearAnimation 0.5s ease;
+}
+
+.modal {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  background: var(--bg-color);
+  border: 3px solid var(--accent-color);
 }
 
 .hero {

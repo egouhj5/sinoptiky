@@ -57,7 +57,7 @@ nav {
     margin-left: auto;
     position: relative;
 
-    a {
+    div {
       margin-right: 250px;
       float: left;
       img {
@@ -184,6 +184,14 @@ nav {
 }
 .animate {
   animation: appearAnimation 0.5s ease;
+}
+.modal {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  background: var(--bg-color);
+  border: 3px solid var(--accent-color);
 }
 //@include fonts($color, $font-size, $font-weight, $line-height, $LS, $TA);
 // ------------------------------------------------------------HERO SECTION------------------------------------------------------------
