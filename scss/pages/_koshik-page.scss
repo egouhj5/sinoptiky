@@ -20,6 +20,7 @@
                 padding: 0; 
                 p {
                     float: right;
+                    text-transform: uppercase;
                 }
                 .cart-talbe-item__image {
                 display: flex;
@@ -93,7 +94,7 @@
             background-color: var(--accent-color);
             color: var(--bg-color);
         }
-        button {
+        button, a {
             @extend %btn;
             @include fonts(var(--accent-color), 16px, 700, 0, 2px, center);
             padding: 10px 20px;
@@ -101,5 +102,18 @@
             text-transform: uppercase;
         }
         }
+    }
+}
+.cart__label {
+    width: 15px;
+    height: 15px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    .cart-label__number {
+            @include fonts(var(--title-color), 12px, 700, 28px, 0, center);
+            margin: -6px 5px 0 0;
     }
 }

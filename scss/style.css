@@ -5,7 +5,7 @@
   --accent-color: #8649cc;
 }
 
-.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description button, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn, .cart-container .cart__menu .cart-menu__buttons button {
+.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description button, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn, .cart-container .cart__menu .cart-menu__buttons button, .cart-container .cart__menu .cart-menu__buttons a {
   box-sizing: border-box;
   cursor: pointer;
   background: var(--bg-color);
@@ -13,7 +13,7 @@
   color: var(--accent-color);
   transition: 0.5s;
 }
-.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description button:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover, .cart-container .cart__menu .cart-menu__buttons button:hover {
+.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description button:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover, .cart-container .cart__menu .cart-menu__buttons button:hover, .cart-container .cart__menu .cart-menu__buttons a:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -100,6 +100,7 @@ img {
 }
 .cart-container .cart__table .cart-product__cell p {
   float: right;
+  text-transform: uppercase;
 }
 .cart-container .cart__table .cart-product__cell .cart-talbe-item__image {
   display: flex;
@@ -215,7 +216,7 @@ img {
   background-color: var(--accent-color);
   color: var(--bg-color);
 }
-.cart-container .cart__menu .cart-menu__buttons button {
+.cart-container .cart__menu .cart-menu__buttons button, .cart-container .cart__menu .cart-menu__buttons a {
   color: var(--accent-color);
   font-size: 16px;
   font-weight: 700;
@@ -226,6 +227,26 @@ img {
   padding: 10px 20px;
   height: 54px;
   text-transform: uppercase;
+}
+
+.cart__label {
+  width: 15px;
+  height: 15px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+}
+.cart__label .cart-label__number {
+  color: var(--title-color);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  margin: -6px 5px 0 0;
 }
 
 .blestochki1 {
