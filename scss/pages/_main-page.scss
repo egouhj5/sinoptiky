@@ -620,8 +620,9 @@ nav {
     position: absolute;
     background: none;
     border: none;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
     cursor: pointer;
     &:hover img {
       filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
