@@ -5,7 +5,7 @@
   --accent-color: #8649cc;
 }
 
-.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description button, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .hero__btn, .cart-container .cart__menu .cart-menu__buttons button, .cart-container .cart__menu .cart-menu__buttons a {
+.may-also__container .may-also__box .may-also-cell__btns button, .buy-now__container .buy-now-buying__options button, .video-description a, .blog__btn, .featured-categories__main-btn, .cell__btns button, .trending-count__btn, .features__list li button, .featured-product__box button, .featured-product__container a, .hero__btn, .cart-container .cart__menu .cart-menu__buttons button, .cart-container .cart__menu .cart-menu__buttons a {
   box-sizing: border-box;
   cursor: pointer;
   background: var(--bg-color);
@@ -13,7 +13,7 @@
   color: var(--accent-color);
   transition: 0.5s;
 }
-.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description button:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .hero__btn:hover, .cart-container .cart__menu .cart-menu__buttons button:hover, .cart-container .cart__menu .cart-menu__buttons a:hover {
+.may-also__container .may-also__box .may-also-cell__btns button:hover, .buy-now__container .buy-now-buying__options button:hover, .video-description a:hover, .blog__btn:hover, .featured-categories__main-btn:hover, .cell__btns button:hover, .trending-count__btn:hover, .features__list li button:hover, .featured-product__box button:hover, .featured-product__container a:hover, .hero__btn:hover, .cart-container .cart__menu .cart-menu__buttons button:hover, .cart-container .cart__menu .cart-menu__buttons a:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border: 3px solid var(--accent-color);
@@ -702,16 +702,27 @@ nav div p img:hover {
   display: flex;
   justify-content: space-between;
 }
-.featured-product__container button {
+.featured-product__container a {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 70px;
+  text-transform: uppercase;
+  position: relative;
 }
-.featured-product__container button:hover img {
+.featured-product__container a:hover img {
   right: -35px;
   opacity: 1;
 }
-.featured-product__container button img {
+.featured-product__container a img {
   opacity: 0;
   filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
   transition: 0.3s;
@@ -1537,7 +1548,7 @@ footer .container {
   width: 16px;
   filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
 }
-.site__map p {
+.site__map a {
   color: var(--text-color);
   font-size: 16px;
   font-weight: 700;
@@ -1546,6 +1557,7 @@ footer .container {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .product__main {
@@ -1761,7 +1773,7 @@ footer .container {
   text-align: left;
   text-decoration: none;
 }
-.video-description button {
+.video-description a {
   color: var(--accent-color);
   font-size: 18px;
   font-weight: 700;
@@ -1776,11 +1788,11 @@ footer .container {
   align-items: center;
   position: relative;
 }
-.video-description button:hover img {
+.video-description a:hover img {
   right: -35px;
   opacity: 1;
 }
-.video-description button img {
+.video-description a img {
   opacity: 0;
   filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
   transition: 0.3s;

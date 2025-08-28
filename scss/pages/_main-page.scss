@@ -340,23 +340,29 @@ nav {
   //waiting to be fixed
   display: flex;
   justify-content: space-between;
-  button {
-    display: flex;
-    position: relative;
-    align-items: center;
-    &:hover img {
-      right: -35px;
-      opacity: 1;
-    }
-    img {
-      opacity: 0;
-      filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
-        hue-rotate(227deg) brightness(135%) contrast(101%);
-      transition: 0.3s;
-      height: 35px;
-      width: 35px;
-      position: absolute;
-      right: 0;
+  a {
+  @extend %btn;
+  @include fonts(var(--accent-color), 18px, 700, 0, 3px, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 70px;
+  text-transform: uppercase;
+  position: relative;
+  &:hover img {
+    right: -35px;
+    opacity: 1;
+  }
+  img {
+    opacity: 0;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%)
+      hue-rotate(227deg) brightness(135%) contrast(101%);
+    transition: 0.3s;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 0;
     }
   }
 }

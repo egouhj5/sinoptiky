@@ -14,9 +14,10 @@
         width: 16px;
         filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(747%) hue-rotate(227deg) brightness(135%) contrast(101%);
     }
-    p {
+    a {
         @include fonts(var(--text-color), 16px, 700, 28px, 0, center);
         cursor: pointer;
+        text-decoration: none;
     }
 }
 .product__main {
@@ -183,7 +184,7 @@
     p {
         @include fonts(var(--text-color), 16px, 400, 28px, 0, left);
     }
-    button {
+    a {
         @include fonts(var(--accent-color), 18px, 700, 25px, 3px, center);
         @extend %btn;
         text-transform: uppercase;
